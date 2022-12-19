@@ -112,7 +112,7 @@ function handleClick(evt) {
   }
   placeToken(crIdx)
   checkForTie()
-  checkforWinner()
+  checkForWinner()
   switchPlayerTurn()
   render()
 }
@@ -127,3 +127,33 @@ function checkForTie(){
   }
 }
 
+function checkForWinner(){
+  for(let i= 0; i <winningCombos.length; i++){
+    if(Math.abs(
+      board[winningCombos[i][0]]+
+      board[winningCombos[i][1]]+
+      board[winningCombos[i][2]]+
+      board[winningCombos[i][3]]
+    ) === 4) {
+      winner = true
+    }
+  }
+}
+
+function switchPlayerTurn() {
+  if (winner === true) {
+    return
+  }
+  turn *= -1
+}
+
+function updateBoard() {
+  board.forEach (circle, i) => {
+    if (circle === 1) {
+      circleEls[i].style.backgroundColors = 'Red'
+    }
+    if (circle === -1) {
+      circleEls[i].style.backgroundColors = 'Yellow'
+    }
+  }
+}
