@@ -6,8 +6,8 @@ body {
 }
 
 .board {
-  height: 600px;
-  width: 690px;
+  height: 540px;
+  width: 630px;
   background-color: gold;
   border: 10px solid goldenrod;
   margin: 0 auto;
