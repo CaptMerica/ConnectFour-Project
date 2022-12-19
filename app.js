@@ -20,3 +20,4 @@ circleEls.forEach(circle =>circle.addEventListener("click", handleclick))
 resetBtnlEl.addEventListener("click", init)
 
 //---------------------Functions----------------------//
+
