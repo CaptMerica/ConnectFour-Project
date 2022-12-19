@@ -21,3 +21,11 @@ resetBtnlEl.addEventListener("click", init)
 
 //---------------------Functions----------------------//
 
+init()
+function init() {
+  board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+  turn = 1
+  winner = false
+  tie= false
+}
+
