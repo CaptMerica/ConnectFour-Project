@@ -1,0 +1,16 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background-color: black;
+}
+
+.board {
+  height: 600px;
+  width: 690px;
+  background-color: gold;
+  border: 10px solid goldenrod;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
