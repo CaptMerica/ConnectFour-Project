@@ -16,7 +16,7 @@ const resetBtnlEl = document.getElementById("reset")
 
 //------------------Event Listeners-------------------//
 
-circleEls.forEach(circle =>circle.addEventListener("click", handleclick))
+circleEls.forEach(circle =>circle.addEventListener("click", handleClick))
 resetBtnlEl.addEventListener("click", init)
 
 //---------------------Functions----------------------//
@@ -27,5 +27,29 @@ function init() {
   turn = 1
   winner = false
   tie= false
+}
+
+function handleClick(evt) {
+  const crIdx = Number(evt.target.id.replace('cr',''))
+  if (board[crIdx] !== null) {
+    return
+  } else if (winner === true){
+    return
+  }
+  placeToken(crIdx)
+  checkForTie()
+  checkforWinner()
+  switchPlayerTurn()
+  //render()
+}
+
+function placeToken(i) {
+  board[i] = turn
+}
+
+function checkForTie(){
+  if (!board.includes(null)) {
+    tie = true
+  }
 }
 
