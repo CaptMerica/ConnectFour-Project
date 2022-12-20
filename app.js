@@ -105,10 +105,6 @@ function init() {
 }
 
 
-function placeToken(i) {
-  board[i] = turn
-}
-
 
 function switchPlayerTurn() {
   if (winner === true) {
@@ -120,23 +116,24 @@ function switchPlayerTurn() {
 function updateBoard() {
   board.forEach((circle, i) => {
     if (circle === 1) {
-      circleEls[i].textContent = "🔴"
+      circleEls[i].style.backgroundColor = "red"
     }
-    if (circle === -1) {
-      circleEls[i].textContent = "🟡"
+    else if (circle === -1) {
+      circleEls[i].style.backgroundColor = "yellow"
     }
-    if (circle === null) {
-      circleEls[i].textContent = " "
+    else {
+      circleEls[i].style.backgroundColor = ""
     }
   })
 }
 
+
 function updateMessage(){
   if (!winner && !tie) {
     if (turn > 0){
-      messageEl.textContent = "It's 🔴's turn..."
+      messageEl.textContent = "🔴's turn"
     } else {
-      messageEl.textContent = "It's 🟡's turn..."
+      messageEl.textContent = "🟡's turn"
     }
   } else if (!winner && tie) {
     messageEl.textContent = "Tie!"
@@ -156,7 +153,6 @@ function handleClick(evt) {
   if (board[crIdx] !== null || winner === true) {
     return
   }
-  placeToken()
   columnstart = 35
   while (board[crIdx + columnstart] !== null){
     columnstart -= 7
