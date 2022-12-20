@@ -84,7 +84,7 @@ let board, turn, win, tie
 
 //---------------Cached Element References-------------//
 
-const circleEls = document.querySelectorAll(".cir")
+const circleEls = document.querySelectorAll(".circle")
 const messageEl = document.getElementById("message")
 const resetBtnEl = document.getElementById("reset")
 
@@ -118,7 +118,7 @@ function switchPlayerTurn() {
 }
 
 function updateBoard() {
-  board.forEach ((circle, i) => {
+  board.forEach((circle, i) => {
     if (circle === 1) {
       circleEls[i].textContent = "🔴"
     }
@@ -126,7 +126,7 @@ function updateBoard() {
       circleEls[i].textContent = "🟡"
     }
     if (circle === null) {
-      circleEls[i].textContent = ""
+      circleEls[i].textContent = " "
     }
   })
 }
@@ -156,7 +156,6 @@ function handleClick(evt) {
   if (board[crIdx] !== null || winner === true) {
     return
   }
-  placeToken(crIdx)
   checkForTie()
   checkForWinner()
   columnstart = 35
@@ -164,6 +163,7 @@ function handleClick(evt) {
     columnstart -= 7
   }
   board[crIdx + columnstart] = turn
+  placeToken(turn)
   switchPlayerTurn()
   render()
 }
