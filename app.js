@@ -100,15 +100,15 @@ function init() {
   board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
   turn = 1
   winner = false
-  tie= false
+  tie = false
   render()
 }
-
 
 
 function placeToken(i) {
   board[i] = turn
 }
+
 
 function switchPlayerTurn() {
   if (winner === true) {
@@ -163,10 +163,11 @@ function handleClick(evt) {
     columnstart -= 7
   }
   board[crIdx + columnstart] = turn
-  placeToken(turn)
+  placeToken()
   switchPlayerTurn()
   render()
 }
+
 
 function checkForTie(){
   if (!board.includes(null)) {
@@ -175,7 +176,8 @@ function checkForTie(){
 }
 
 function checkForWinner(){
-  for(let i= 0; i <winningCombos.length; i++){
+  for(let i= 0; i < winningCombos.length; i++){
+  // winningCombos.forEach(function()) {
     if(Math.abs(
       board[winningCombos[i][0]]+
       board[winningCombos[i][1]]+
@@ -186,6 +188,7 @@ function checkForWinner(){
     }
   }
 }
+
 
 function render() {
   updateBoard()
