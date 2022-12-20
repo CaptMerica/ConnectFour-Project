@@ -156,14 +156,14 @@ function handleClick(evt) {
   if (board[crIdx] !== null || winner === true) {
     return
   }
-  checkForTie()
-  checkForWinner()
+  placeToken()
   columnstart = 35
   while (board[crIdx + columnstart] !== null){
     columnstart -= 7
   }
   board[crIdx + columnstart] = turn
-  placeToken()
+  checkForTie()
+  checkForWinner()
   switchPlayerTurn()
   render()
 }
@@ -191,5 +191,5 @@ function checkForWinner(){
 function render() {
   updateBoard()
   updateMessage()
-  console.log();
+  console.log(board);
 }
