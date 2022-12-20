@@ -151,7 +151,7 @@ function updateMessage(){
 
 
 function handleClick(evt) {
-  const crIdx = Number(evt.target.id.replace('cr',''))
+  const crIdx = Number(evt.target.id.replace('cr',' '))
   console.log(crIdx);
   if (board[crIdx] !== null || winner === true) {
     return
@@ -177,7 +177,6 @@ function checkForTie(){
 
 function checkForWinner(){
   for(let i= 0; i < winningCombos.length; i++){
-  // winningCombos.forEach(function()) {
     if(Math.abs(
       board[winningCombos[i][0]]+
       board[winningCombos[i][1]]+
@@ -185,15 +184,6 @@ function checkForWinner(){
       board[winningCombos[i][3]]
     ) === 4) {
       winner = true
-    } else {
-      if(Math.abs(
-        board[winningCombos[i][0]]+
-        board[winningCombos[i][1]]+
-        board[winningCombos[i][2]]+
-        board[winningCombos[i][3]]
-      ) === -4) {
-        winner = true
-      }
     }
   }
 }
@@ -201,5 +191,5 @@ function checkForWinner(){
 function render() {
   updateBoard()
   updateMessage()
-  console.log(board);
+  console.log();
 }
