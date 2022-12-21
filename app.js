@@ -87,11 +87,17 @@ let board, turn, winner, tie
 const circleEls = document.querySelectorAll(".circle")
 const messageEl = document.getElementById("message")
 const resetBtnEl = document.getElementById("reset")
+const tokenDrop = document.querySelector(".board")
+const tokenAudio = new Audio("../audio/ConnectFour_Splice_CUT.wav")
 
 //------------------Event Listeners-------------------//
 
 circleEls.forEach(circle => circle.addEventListener("click", handleClick))
 resetBtnEl.addEventListener("click", init)
+
+tokenDrop.addEventListener("click", function(){
+  tokenAudio.play()
+})
 
 //---------------------Functions----------------------//
 
