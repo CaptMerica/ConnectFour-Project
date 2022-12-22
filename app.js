@@ -78,7 +78,6 @@ const winningCombos = [
 //---------------------Vairables-----------------------//
 
 let board, turn, winner, tie, timerInterval
-
 let timeLeft = 10
 
 

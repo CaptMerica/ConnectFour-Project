@@ -1,12 +1,12 @@
 # This is Connect Four!
 
-![A semi-completed game of Connect-Four on a 6x7 board with 42 token inserts.]()
+![A semi-completed game of Connect-Four on a 6x7 board with 42 token inserts.](Screenshot 2022-12-22 at 11.14.46 AM (2).png)
 
 This is a recreation of the classic Connect-Four game.  Drop the tokens into any of the four columns with your red or yellow tokens. The goal of the game is to match four of the player's colored tokens either horizontally, diagonally, or vertically.  You can set up strategies to prevent your oppenent from completing their row of four. If both players are unable to get four tokens and reach the very top of the board, the game ends in a tie!  You can always start over by pressing the 'Try Again?' button below the board.
 
 ## [Play the game here!](https://rm-connectfour.netlify.app/)
 
-## Technologies used
+## Technologies used 💾
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -17,13 +17,14 @@ This is a recreation of the classic Connect-Four game.  Drop the tokens into any
 
 ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 
- ## Attributions
- TBA
+ 
+## Attributions
+  TBA
 
-## Recent Changes
+## Recent Changes 🧹
+- Added a 10 second timer.
 
-
-## Ice Box 
+## Ice Box 🧊
 -[X] Add functionality for users to drop their tokens to the bottom of the board.
 
 -[X] Font Design
