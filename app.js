@@ -81,6 +81,11 @@ const winningCombos = [
 //---------------------Vairables-----------------------//
 
 let board, turn, winner, tie
+let timeLeft = 10
+let timer = setInterval(function(){
+  timeLeft -=1
+  console.log(timeLeft);
+}, 1000)
 
 //---------------Cached Element References-------------//
 
