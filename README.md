@@ -2,18 +2,20 @@
 
 ![A semi-completed game of Connect-Four on a 6x7 board with 42 token inserts.]()
 
-This is a recreation of the classic Connect-Four game.  Drop the tokens into any of the four columns with your red or yellow tokens. The goal of the game is to match four of your colored tokens either horizontally, diagonally, or vertically.  You can set up strategies to prevent your oppenent from completing their row of four. If both players are unable to get four tokens and reach the very top of the board, the game ends in a tie!  You can always start over by pressing the 'Try Again?' button below the board.
+This is a recreation of the classic Connect-Four game.  Drop the tokens into any of the four columns with your red or yellow tokens. The goal of the game is to match four of the player's colored tokens either horizontally, diagonally, or vertically.  You can set up strategies to prevent your oppenent from completing their row of four. If both players are unable to get four tokens and reach the very top of the board, the game ends in a tie!  You can always start over by pressing the 'Try Again?' button below the board.
 
 ## [Play the game here!](https://rm-connectfour.netlify.app/)
 
 ## Technologies used
- -HTML
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
- -CSS
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
- -Javascript
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
- -git
+![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 
  ## Attributions
  TBA

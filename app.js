@@ -1,7 +1,6 @@
 //---------------------Constants-----------------------//
 const winningCombos = [
   
-  //Horizontally
   [0, 1, 2, 3],
   [1, 2, 3, 4],
   [2, 3, 4, 5],
@@ -27,7 +26,6 @@ const winningCombos = [
   [37, 38, 39, 40],
   [38, 39, 40, 41],
 
-  //Vertically
   [0, 7, 14, 21],
   [7, 14, 21, 28],
   [14, 21, 28, 35],
@@ -50,7 +48,6 @@ const winningCombos = [
   [13, 20, 27, 34],
   [20, 27, 34, 41],
 
-  //Diagonally
   [0, 8, 16, 24],
   [1, 9, 17, 25],
   [2, 10, 18, 26],
@@ -84,14 +81,14 @@ let board, turn, winner, tie
 
 let timeLeft = 10
 
-// let timer = setInterval(function() {
-//   countdownEl.textContent = timeLeft + ` seconds remaining!`
-//   timeLeft -= 1
-//   console.log(timeLeft)
-//   if (timeLeft < 0) {
-//     clearInterval(timer)
-//   }
-// }, 1000);
+let timer = setInterval(function() {
+  countdownEl.textContent = timeLeft + ` seconds remaining!`
+  timeLeft -= 1
+  console.log(timeLeft)
+  if (timeLeft < 0) {
+    clearInterval(timer)
+  }
+}, 1000);
 
 //---------------Cached Element References-------------//
 
@@ -100,16 +97,19 @@ const messageEl = document.getElementById("message")
 const resetBtnEl = document.getElementById("reset")
 const tokenDrop = document.querySelector(".board")
 const tokenAudio = new Audio("../audio/ConnectFour_Splice_CUT.wav")
-// const countdownEl = document.getElementById("countdown")
+const countdownEl = document.getElementById("countdown")
 
 //------------------Event Listeners-------------------//
 
 circleEls.forEach(circle => circle.addEventListener("click", handleClick))
+
 resetBtnEl.addEventListener("click", init)
 
 tokenDrop.addEventListener("click", function(){
   tokenAudio.play()
 })
+
+countdownEl.addEventListener("click", init)
 
 //---------------------Functions----------------------//
 
