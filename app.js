@@ -77,18 +77,32 @@ const winningCombos = [
 
 //---------------------Vairables-----------------------//
 
-let board, turn, winner, tie
+let board, turn, winner, tie, timerInterval
 
 let timeLeft = 10
 
-let timer = setInterval(function() {
-  countdownEl.textContent = timeLeft + ` seconds remaining!`
-  timeLeft -= 1
-  console.log(timeLeft)
-  if (timeLeft < 0) {
-    clearInterval(timer)
+// let timer = 
+// setInterval(function() {
+//   countdownEl.textContent = timeLeft + ` seconds remaining!`
+//   timeLeft -= 1
+//   if (timeLeft < 0) {
+//     clearInterval(timer)
+//   }
+// }, 1000);
+
+function startTimer(){
+  if (timerInterval){
+    clearInterval(timerInterval)
+    timeLeft = 10
   }
-}, 1000);
+  timerInterval = setInterval(function() {
+    countdownEl.textContent = timeLeft + ` seconds remaining!`
+    timeLeft -= 1
+    if (timeLeft < 0) {
+      clearInterval(timerInterval)
+    }
+  }, 1000);
+}
 
 //---------------Cached Element References-------------//
 
@@ -116,6 +130,7 @@ countdownEl.addEventListener("click", init)
 init()
 function init() {
   board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+  startTimer()
   turn = 1
   winner = false
   tie = false
@@ -129,6 +144,7 @@ function switchPlayerTurn() {
     return
   }
   turn *= -1
+  startTimer()
 }
 
 function updateBoard() {

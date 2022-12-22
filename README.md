@@ -32,7 +32,7 @@ This is a recreation of the classic Connect-Four game.  Drop the tokens into any
 
 -[X] Reset button
 
--[] Timer for quick strategies
+-[X] Timer for quick strategies
 
 -[] Confetti for the winner of the game
 
