@@ -81,11 +81,17 @@ const winningCombos = [
 //---------------------Vairables-----------------------//
 
 let board, turn, winner, tie
+
 let timeLeft = 10
-let timer = setInterval(function(){
-  timeLeft -=1
-  console.log(timeLeft);
-}, 1000)
+
+// let timer = setInterval(function() {
+//   countdownEl.textContent = timeLeft + ` seconds remaining!`
+//   timeLeft -= 1
+//   console.log(timeLeft)
+//   if (timeLeft < 0) {
+//     clearInterval(timer)
+//   }
+// }, 1000);
 
 //---------------Cached Element References-------------//
 
@@ -94,6 +100,7 @@ const messageEl = document.getElementById("message")
 const resetBtnEl = document.getElementById("reset")
 const tokenDrop = document.querySelector(".board")
 const tokenAudio = new Audio("../audio/ConnectFour_Splice_CUT.wav")
+// const countdownEl = document.getElementById("countdown")
 
 //------------------Event Listeners-------------------//
 
