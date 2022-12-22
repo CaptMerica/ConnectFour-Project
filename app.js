@@ -81,28 +81,7 @@ let board, turn, winner, tie, timerInterval
 
 let timeLeft = 10
 
-// let timer = 
-// setInterval(function() {
-//   countdownEl.textContent = timeLeft + ` seconds remaining!`
-//   timeLeft -= 1
-//   if (timeLeft < 0) {
-//     clearInterval(timer)
-//   }
-// }, 1000);
 
-function startTimer(){
-  if (timerInterval){
-    clearInterval(timerInterval)
-    timeLeft = 10
-  }
-  timerInterval = setInterval(function() {
-    countdownEl.textContent = timeLeft + ` seconds remaining!`
-    timeLeft -= 1
-    if (timeLeft < 0) {
-      clearInterval(timerInterval)
-    }
-  }, 1000);
-}
 
 //---------------Cached Element References-------------//
 
@@ -126,6 +105,20 @@ tokenDrop.addEventListener("click", function(){
 countdownEl.addEventListener("click", init)
 
 //---------------------Functions----------------------//
+
+function startTimer(){
+  if (timerInterval){
+    clearInterval(timerInterval)
+    timeLeft = 10
+  }
+  timerInterval = setInterval(function() {
+    countdownEl.textContent = timeLeft + ` seconds remaining!`
+    timeLeft -= 1
+    if (timeLeft < 0) {
+      clearInterval(timerInterval)
+    }
+  }, 1000);
+}
 
 init()
 function init() {
