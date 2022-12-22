@@ -28,9 +28,11 @@ This is a recreation of the classic Connect-Four game.  Drop the tokens into any
 
 -[X] Sound
 
+-[X] Reset button
+
 -[] Timer for quick strategies
 
--[] Confetti
+-[] Confetti for the winner of the game
 
 -[] Accessibility to choose multiple token color options
 
