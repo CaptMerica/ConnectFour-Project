@@ -1,6 +1,6 @@
 # This is Connect Four!
 
-![A semi-completed game of Connect-Four on a 6x7 board with 42 token inserts.](images/MainPage.png)
+![A semi-completed game of Connect-Four on a 6x7 board with 42 token inserts.](images/Connect-FourMainPage3.png)
 
 This is a recreation of the classic Connect-Four game.  Drop the tokens into any of the four columns with your red or yellow tokens. The goal of the game is to match four of the player's colored tokens either horizontally, diagonally, or vertically.  You can set up strategies to prevent your oppenent from completing their token combination.  There's a slight catch, there's a 10 second timer that starts immediately and resets every turn.  Make your moves carefully! If both players are unable to get four tokens and reach the very top of the board, the game ends in a tie!  You can always start the game over by pressing the 'Try Again?' button below the board.
 
