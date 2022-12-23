@@ -24,7 +24,7 @@ This is a recreation of the classic Connect-Four game.  Drop the tokens into any
 
 
 ## Recent Changes 🧹
-- Added a 10 second timer.
+- Added a turn-based 10 second timer.
 
 ## Ice Box 🧊
 -[X] Add functionality for users to drop their tokens to the bottom of the board.
