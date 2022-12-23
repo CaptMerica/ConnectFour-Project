@@ -6,7 +6,6 @@ body {
 }
 
 h1{
-font: ''
 }
 
 #countdown{
@@ -40,4 +39,11 @@ font: ''
 
 button {
   padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 0 5px 5px blue;
+  background-color: lightskyblue;
+  border-radius: 100%;
+
 }
