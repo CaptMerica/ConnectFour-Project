@@ -19,7 +19,9 @@ This is a recreation of the classic Connect-Four game.  Drop the tokens into any
 
  
 ## Attributions
-  Favicon created in Favicon.io
+  Favicon created in Favicon.io.  
+  Sound clip recorded from [discokingmusic via Freesound](https://freesound.org/people/discokingmusic/sounds/271387/)
+
 
 ## Recent Changes 🧹
 - Added a 10 second timer.
