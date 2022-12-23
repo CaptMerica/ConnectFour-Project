@@ -1,4 +1,4 @@
-//---------------------Constants-----------------------//
+
 const winningCombos = [
   
   [0, 1, 2, 3],
@@ -75,14 +75,14 @@ const winningCombos = [
 ]
 
 
-//---------------------Vairables-----------------------//
+
 
 let board, turn, winner, tie, timerInterval
 let timeLeft = 10
 
 
 
-//---------------Cached Element References-------------//
+
 
 const circleEls = document.querySelectorAll(".circle")
 const messageEl = document.getElementById("message")
@@ -91,7 +91,8 @@ const tokenDrop = document.querySelector(".board")
 const tokenAudio = new Audio("../audio/ConnectFour_Splice_CUT.wav")
 const countdownEl = document.getElementById("countdown")
 
-//------------------Event Listeners-------------------//
+
+
 
 circleEls.forEach(circle => circle.addEventListener("click", handleClick))
 
@@ -103,7 +104,7 @@ tokenDrop.addEventListener("click", function(){
 
 countdownEl.addEventListener("click", init)
 
-//---------------------Functions----------------------//
+
 
 function startTimer(){
   if (timerInterval){
