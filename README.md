@@ -19,7 +19,7 @@ This is a recreation of the classic Connect-Four game.  Drop the tokens into any
 
  
 ## Attributions
-  TBA
+  Favicon created in Favicon.io
 
 ## Recent Changes 🧹
 - Added a 10 second timer.
