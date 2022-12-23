@@ -37,6 +37,8 @@ This is a recreation of the classic Connect-Four game.  Drop the tokens into any
 
 -[X] Timer for quick strategies
 
+-[] Fix bug involving audio still playing when clicking on the board.
+
 -[] Confetti for the winner of the game
 
 -[] Accessibility to choose multiple token color options
